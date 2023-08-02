@@ -5,18 +5,20 @@
 
 // define and configure main Phaser game object
 let config = {
-    type: Phaser.AUTO,
-    // make pixel art crip
+
+    // make pixel art crop
     render: {
         pixelArt: true
     },
     
     // set parent container for where playscreen should be displayed on webpage
-    parent : 'Untitled148',
-    height: 320  ,
-    width: 480,
+    type: Phaser.AUTO,
     scale: {
-        autoCenter: Phaser.Scale.CENTER_BOTH
+        mode: Phaser.Scale.FIT,
+        parent: 'Untitled148',
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 1200,
+        height: 600
     },
     physics: {
         default: 'arcade',
@@ -28,9 +30,14 @@ let config = {
             }
         }
     },
-    zoom: 2,
-    scene: [ Loader, Menu, Play, Play2, Start ]
+
+    scene: [ Loader , Start, Menu]
 }
 
 // define game
 let game = new Phaser.Game(config);
+
+// global variables 
+let keyUP, keyLEFT, keyRIGHT, keyENTER;
+const w = game.config.width;
+const h = game.config.height;
