@@ -67,11 +67,14 @@ class Loader extends Phaser.Scene {
 
 
         // load spritesheet file path
+        // planet frame formula image resolution width / pixel width, image resolution height / pixel
         this.load.path = "./assets/spritesheets/"
         // load spritesheets 
-      
+        this.load.spritesheet('blackHole', 'blackHole.png', {frameWidth: 300, frameHeight: 300, startFrame:0, endFrame: 899});
         //this.load.spritesheet('protagonist', 'protagonist.png', {frameWidth: 16, frameHeight: 16, startFrame: 0, endFrame: 1});
-        this.load.spritesheet('tutorialPlanet', 'tutorialPlanet2.png', {frameWidth: 1500,frameHeight: 1500,startFrame: 0, endFrame: 99});
+        //this.load.spritesheet('tutorialPlanet', 'tutorialPlanet2.png', {frameWidth: 1500,frameHeight: 1500,startFrame: 0, endFrame: 99});
+        //this.load.spritesheet('placeholderPlanet', 'placeholderPlanet2.png', {frameWidth: 100,frameHeight: 100,startFrame: 0, endFrame: 399});
+        
         /*
         this.load.spritesheet('runRight', 'main-run-right.png', {frameWidth: 32,frameHeight: 32,startFrame: 0, endFrame: 5});
         this.load.spritesheet('jumpRight', 'main-jump-right.png', {frameWidth: 32,frameHeight: 32,startFrame: 0, endFrame: 7});

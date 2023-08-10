@@ -7,7 +7,7 @@ class Menu extends Phaser.Scene{
     create() {
         this.cameras.main.fadeIn(1000);
         
-        const BCKG = this.add.image(w/2, h/2, 'menu_bckg').setOrigin(0.5).setScale(1.5);
+        this.BCKG = this.add.image(w/2, h/2, 'menu_bckg').setOrigin(0.5).setScale(1.5);
 
         this.cursors = this.input.keyboard.createCursorKeys();
         const button2 = this.add.image(game.config.width-30, 30, 'fullscreen2', 0).setOrigin(0.5).setInteractive();
@@ -29,11 +29,19 @@ class Menu extends Phaser.Scene{
 
         }, this);
 
-        const tutorialPlanet = new menuPlanet(this, w/2, h/2, 'tutorialPlanet')
-        tutorialPlanet.setScale(.25)
+        //const tutorialPlanet = new menuPlanet(this, w/2, h/2, 'tutorialPlanet')
+        //tutorialPlanet.setScale(.25)
+
+        this.blackHole= new menuPlanet(this, w/2, h/2, 'blackHole')
+        this.blackHole.setScale(2)
+
+
+
     }
     update(){
-
+        // Gradually increase the rotation angle
+        this.BCKG.rotation += 0.0009; 
+        this.blackHole.rotation -= 0.001;
     }
 }
 
