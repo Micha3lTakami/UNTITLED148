@@ -28,7 +28,8 @@ class Loader extends Phaser.Scene {
 
         this.load.path  = './assets/images/'
         this.load.image('start_screen', 'startBCKG.png');
-        this.load.image('menu_bckg', 'tempMenuBckg.png');
+        this.load.image('menu_bckg', 'preview2.png');
+        this.load.image('question', 'question.png');
 
         //add tile info
         /*
@@ -54,6 +55,7 @@ class Loader extends Phaser.Scene {
         // load images
         this.load.image('fullscreen', 'fullscreen.png');
         this.load.image('fullscreen2', 'fullscreen2.png');
+  
 
         /*
         this.load.image('platform', 'block.png' );
@@ -70,7 +72,9 @@ class Loader extends Phaser.Scene {
         // planet frame formula image resolution width / pixel width, image resolution height / pixel
         this.load.path = "./assets/spritesheets/"
         // load spritesheets 
-        this.load.spritesheet('blackHole', 'blackHole.png', {frameWidth: 300, frameHeight: 300, startFrame:0, endFrame: 899});
+        this.load.spritesheet('blackHole', 'blackHole2.png', {frameWidth: 400, frameHeight: 400, startFrame:0, endFrame: 899});
+        this.load.spritesheet('tutorialPlanet', 'earth1.png', {frameWidth: 250, frameHeight: 250, startFrame:0, endFrame: 1224});
+        this.load.spritesheet('placeHolderPlanet', 'placeHolder.png', {frameWidth: 12, frameHeight: 12, startFrame:0, endFrame: 1224});
         //this.load.spritesheet('protagonist', 'protagonist.png', {frameWidth: 16, frameHeight: 16, startFrame: 0, endFrame: 1});
         //this.load.spritesheet('tutorialPlanet', 'tutorialPlanet2.png', {frameWidth: 1500,frameHeight: 1500,startFrame: 0, endFrame: 99});
         //this.load.spritesheet('placeholderPlanet', 'placeholderPlanet2.png', {frameWidth: 100,frameHeight: 100,startFrame: 0, endFrame: 399});

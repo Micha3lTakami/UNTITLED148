@@ -7,7 +7,7 @@ class Start extends Phaser.Scene{
     create() {
         this.cameras.main.fadeIn(1000);
         
-        let bckg = this.add.image(w/2, h/2, 'start_screen')
+        let bckg = this.add.image(w/2+1, h/2, 'start_screen')
         bckg.setOrigin(0.5).setScale(0.5);
 
         const startText = this.add.text(w/2, h/2, 'Press Enter To Start').setOrigin(0.5)
